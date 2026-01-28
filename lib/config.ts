@@ -52,12 +52,12 @@ export const HERO_CONFIG = {
 
 export const CONTACT_INFO = {
   // TODO: Update with actual contact details
-  phone: '+234 (0) XXX XXX XXXX',
-  phoneRaw: '+234XXXXXXXXXX', // For tel: links
+  phone: '+234 (0) 8060 314 4497',
+  phoneRaw: '+2348060314497', // For tel: links
   email: 'info@dcnl.com',
-  address: 'Lagos, Nigeria',
+  address: 'Oyigbo, Nigeria',
   // Optional: Full address for maps
-  fullAddress: 'Your Full Address, Lagos, Nigeria, 100001',
+  fullAddress: 'Port Harcourt - Aba Road, Oyigbo, Nigeria.',
 };
 
 // ============================================================================
@@ -83,7 +83,7 @@ export const COMPANY_INFO = {
   description:
     'Destinyt Company Nigerian Limited - Excellence in construction, fabrication, and industrial solutions since 2009.',
   foundedYear: 2009,
-  headquarters: 'Lagos, Nigeria',
+  headquarters: 'Oyigbo, Nigeria',
 };
 
 // ============================================================================
@@ -104,7 +104,7 @@ export const STATS_CONFIG = {
       suffix: '+',
     },
     {
-      value: '200',
+      value: '25',
       label: 'Skilled Personnel',
       suffix: '+',
     },
@@ -315,7 +315,7 @@ export const METADATA = {
     'Premier construction, fabrication, and industrial solutions. Specializing in steel fabrication, structural construction, and offshore projects across Nigeria.',
   keywords:
     'construction, fabrication, steel, structural engineering, offshore, Nigeria, DCNL',
-  ogImage: 'https://res.cloudinary.com/demo/image/fetch/w_1200,h_630,c_fill/...',
+  ogImage: 'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566261/IMG-20251015-WA0003_wwzihd.jpg',
   twitterHandle: '@dcnl',
 };
 
