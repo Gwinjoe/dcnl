@@ -15,19 +15,19 @@ export const HERO_CONFIG = {
       title: 'Destinyt Company Nigerian Limited',
       subtitle: 'Pioneering Excellence in Construction & Fabrication',
       image:
-        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566261/IMG-20251015-WA0003_wwzihd.jpg',
+        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1771349218/ylssmnmyv3ykr8b4kges_kpezmt.jpg',
     },
     {
       title: 'Steel Fabrication Excellence',
       subtitle: 'Precision Engineering for Modern Infrastructure',
       image:
-        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566260/IMG-20251015-WA0006_o8zhh6.jpg',
+        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1771349219/psft0eis648t2n5cfpsf_hbu2ip.jpg',
     },
     {
       title: 'Offshore & Marine Solutions',
       subtitle: 'Specialized Services for Challenging Environments',
       image:
-        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566261/IMG-20251015-WA0005_qlchfc.jpg',
+        'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1771349217/dsnkxzojs98zwdbfrg4p_juxzrg.jpg',
     },
   ],
   // Rotating feature points shown in bottom-left of hero
