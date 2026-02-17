@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { CONTACT_INFO } from '@/lib/config';
+import { cn } from '@/lib/utils';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,17 +57,14 @@ export default function Header() {
 
           {/* CTA Button (Desktop) */}
           <div className="hidden md:block">
-            <Button
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+            <a
+              href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(buttonVariants({ variant: "default" }), "bg-blue-600 hover:bg-blue-700 text-white")}
             >
-              Request Quote
-            </Button>
+              Contact us
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,18 +94,15 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <Button
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-                setIsOpen(false);
-              }}
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white mt-2"
+            <a
+              href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className={cn(buttonVariants({ variant: "default" }), "w-full bg-blue-600 hover:bg-blue-700 text-white mt-2")}
             >
-              Request Quote
-            </Button>
+              Contact us
+            </a>
           </nav>
         )}
       </div>

@@ -1,8 +1,9 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
 import { CONTACT_INFO } from '@/lib/config';
+import { cn } from '@/lib/utils';
 
 export default function CTASection() {
   return (
@@ -23,14 +24,15 @@ export default function CTASection() {
 
           {/* Primary CTA Button */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button
-              size="lg"
-              onClick={() => window.open(`https://wa.me/${CONTACT_INFO.phoneRaw}`, '_blank')}
-              className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-6 text-lg group"
+            <a
+              href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-6 text-lg group")}
             >
               Contact us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </a>
             <Button
               variant="outline"
               size="lg"

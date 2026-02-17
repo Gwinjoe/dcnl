@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { HERO_CONFIG, CONTACT_INFO } from '@/lib/config';
+import { cn } from '@/lib/utils';
 
 // Use configuration from centralized config file
 const heroSlides = HERO_CONFIG.slides;
@@ -101,13 +102,14 @@ export default function HeroSection() {
             isTransitioning ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
           }`}
         >
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-6 text-lg"
-            onClick={() => window.open(`https://wa.me/${CONTACT_INFO.phoneRaw}`, '_blank')}
+          <a
+            href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-6 text-lg")}
           >
             Contact us
-          </Button>
+          </a>
           <Button
             variant="outline"
             size="lg"
