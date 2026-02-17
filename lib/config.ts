@@ -14,21 +14,18 @@ export const HERO_CONFIG = {
     {
       title: 'Destinyt Company Nigerian Limited',
       subtitle: 'Pioneering Excellence in Construction & Fabrication',
-      // TODO: Replace with your Cloudinary hero image 1
       image:
         'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566261/IMG-20251015-WA0003_wwzihd.jpg',
     },
     {
       title: 'Steel Fabrication Excellence',
       subtitle: 'Precision Engineering for Modern Infrastructure',
-      // TODO: Replace with your Cloudinary hero image 2
       image:
         'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566260/IMG-20251015-WA0006_o8zhh6.jpg',
     },
     {
       title: 'Offshore & Marine Solutions',
       subtitle: 'Specialized Services for Challenging Environments',
-      // TODO: Replace with your Cloudinary hero image 3
       image:
         'https://res.cloudinary.com/dwo5dlbmw/image/upload/v1769566261/IMG-20251015-WA0005_qlchfc.jpg',
     },
@@ -51,9 +48,8 @@ export const HERO_CONFIG = {
 // ============================================================================
 
 export const CONTACT_INFO = {
-  // TODO: Update with actual contact details
   phone: '+234 (0) 8060 314 4497',
-  phoneRaw: '+2348060314497', // For tel: links
+  phoneRaw: '+23480603144497', // For tel: links
   email: 'info@dcnl.com',
   address: 'Oyigbo, Nigeria',
   // Optional: Full address for maps
@@ -65,11 +61,10 @@ export const CONTACT_INFO = {
 // ============================================================================
 
 export const SOCIAL_LINKS = {
-  // TODO: Replace with actual social media URLs
-  facebook: 'https://facebook.com/dcnl',
-  twitter: 'https://twitter.com/dcnl',
-  linkedin: 'https://linkedin.com/company/dcnl',
-  instagram: 'https://instagram.com/dcnl',
+  facebook: 'https://facebook.com/dcnlcompany',
+  twitter: 'https://twitter.com/dcnlcompany',
+  linkedin: 'https://linkedin.com/company/dcnlcompany',
+  instagram: 'https://instagram.com/dcnlcompany',
 };
 
 // ============================================================================
@@ -91,7 +86,6 @@ export const COMPANY_INFO = {
 // ============================================================================
 
 export const STATS_CONFIG = {
-  // TODO: Update with actual statistics
   stats: [
     {
       value: '15',
@@ -121,7 +115,6 @@ export const STATS_CONFIG = {
 // ============================================================================
 
 export const PROJECTS_CONFIG = {
-  // TODO: Replace image URLs with your Cloudinary project images
   projects: [
     {
       id: 1,
@@ -284,7 +277,6 @@ export const FOOTER_CONFIG = {
     'Offshore Solutions',
     'Maintenance',
   ],
-  // TODO: Update these links
   policyLinks: {
     privacy: '/privacy',
     terms: '/terms',

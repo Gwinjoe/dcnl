@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { HERO_CONFIG } from '@/lib/config';
+import { HERO_CONFIG, CONTACT_INFO } from '@/lib/config';
 
 // Use configuration from centralized config file
 const heroSlides = HERO_CONFIG.slides;
@@ -104,8 +104,9 @@ export default function HeroSection() {
           <Button
             size="lg"
             className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-6 text-lg"
+            onClick={() => window.open(`https://wa.me/${CONTACT_INFO.phoneRaw}`, '_blank')}
           >
-            Request a Quote
+            Contact us
           </Button>
           <Button
             variant="outline"

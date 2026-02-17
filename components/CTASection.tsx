@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
+import { CONTACT_INFO } from '@/lib/config';
 
 export default function CTASection() {
   return (
@@ -24,15 +25,10 @@ export default function CTASection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button
               size="lg"
-              onClick={() => {
-                const element = document.querySelector('#contact');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => window.open(`https://wa.me/${CONTACT_INFO.phoneRaw}`, '_blank')}
               className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-6 text-lg group"
             >
-              Request a Quote
+              Contact us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -53,7 +49,7 @@ export default function CTASection() {
               </div>
               <div className="text-left">
                 <p className="text-white/80 text-sm">Call Us</p>
-                <p className="text-white font-semibold">+234 (0) XXX XXX XXXX</p>
+                <p className="text-white font-semibold">{CONTACT_INFO.phone}</p>
               </div>
             </div>
 
@@ -64,7 +60,7 @@ export default function CTASection() {
               </div>
               <div className="text-left">
                 <p className="text-white/80 text-sm">Email Us</p>
-                <p className="text-white font-semibold">info@dcnl.com</p>
+                <p className="text-white font-semibold">{CONTACT_INFO.email}</p>
               </div>
             </div>
           </div>
