@@ -1,51 +1,10 @@
 'use client';
 
 import { CheckCircle2 } from 'lucide-react';
+import { PROCESS_CONFIG } from '@/lib/config';
 
-interface ProcessStep {
-  number: number;
-  title: string;
-  description: string;
-}
 
-const processSteps: ProcessStep[] = [
-  {
-    number: 1,
-    title: 'Consultation & Planning',
-    description:
-      'We meet with clients to understand requirements, conduct site assessments, and develop comprehensive project plans.',
-  },
-  {
-    number: 2,
-    title: 'Design & Engineering',
-    description:
-      'Our expert engineers create detailed designs using CAD and advanced modeling tools, ensuring compliance with standards.',
-  },
-  {
-    number: 3,
-    title: 'Fabrication',
-    description:
-      'Using state-of-the-art equipment and skilled personnel, we fabricate components with precision and quality control.',
-  },
-  {
-    number: 4,
-    title: 'Installation & Assembly',
-    description:
-      'On-site installation and assembly with rigorous safety protocols and professional project management.',
-  },
-  {
-    number: 5,
-    title: 'Testing & Inspection',
-    description:
-      'Comprehensive testing and third-party inspections to ensure all safety and quality standards are met.',
-  },
-  {
-    number: 6,
-    title: 'Maintenance & Support',
-    description:
-      'Ongoing support, maintenance, and optimization services to maximize your infrastructure longevity.',
-  },
-];
+const { steps: processSteps } = PROCESS_CONFIG;
 
 export default function ProcessSection() {
   return (

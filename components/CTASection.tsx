@@ -33,13 +33,6 @@ export default function CTASection() {
               Contact us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-white text-white bg-transparent hover:bg-white/10 font-semibold px-10 py-6 text-lg"
-            >
-              Schedule Consultation
-            </Button>
           </div>
 
           {/* Contact Info */}

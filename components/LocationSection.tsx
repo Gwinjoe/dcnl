@@ -14,7 +14,7 @@ export default function LocationSection() {
             Visit Us
           </h2>
           <p className="text-lg text-zinc-600 max-w-2xl mx-auto">
-            Located in the heart of Lagos, we're ready to discuss your next project.
+            Our office is located in {CONTACT_INFO.address}, and we are ready to discuss your next project.
           </p>
         </div>
 
@@ -110,20 +110,10 @@ export default function LocationSection() {
             <div className="w-full h-full flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-blue-600 mx-auto mb-4 opacity-20" />
-                <p className="text-zinc-400 text-lg font-semibold">Interactive Map</p>
+                <p className="text-zinc-400 text-lg font-semibold">Map Not Available</p>
                 <p className="text-zinc-400 text-sm mt-2">
-                  I will embed a Google Maps iframe here
+                  The interactive map is currently not available.
                 </p>
-                {/* Uncomment and replace with actual Google Maps embed code */}
-                {/* <iframe
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen=""
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=..."
-                ></iframe> */}
               </div>
             </div>
           </div>

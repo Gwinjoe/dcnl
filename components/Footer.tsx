@@ -2,6 +2,7 @@
 
 import { Facebook, Twitter, Linkedin, Instagram, MapPin, Phone, Mail, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { COMPANY_INFO, SOCIAL_LINKS, FOOTER_CONFIG, CONTACT_INFO } from '@/lib/config';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,36 +16,40 @@ export default function Footer() {
             {/* Company Info */}
             <div>
               <h3 className="text-white text-lg font-bold mb-4">
-                DCNL
+                {COMPANY_INFO.shortName}
               </h3>
               <p className="text-zinc-400 mb-6 leading-relaxed">
-                Destinyt Company Nigerian Limited - Excellence in construction, fabrication, and industrial solutions since 2009.
+                {COMPANY_INFO.description}
               </p>
               {/* Social Links */}
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href={SOCIAL_LINKS.facebook}
+                  target='_blank'
                   className="bg-zinc-800 hover:bg-blue-600 rounded-full p-3 transition-colors text-zinc-300 hover:text-white"
                   aria-label="Facebook"
                 >
                   <Facebook size={18} />
                 </a>
                 <a
-                  href="#"
+                  href={SOCIAL_LINKS.twitter}
+                  target='_blank'
                   className="bg-zinc-800 hover:bg-blue-600 rounded-full p-3 transition-colors text-zinc-300 hover:text-white"
                   aria-label="Twitter"
                 >
                   <Twitter size={18} />
                 </a>
                 <a
-                  href="#"
+                  href={SOCIAL_LINKS.linkedin}
+                  target='_blank'
                   className="bg-zinc-800 hover:bg-blue-600 rounded-full p-3 transition-colors text-zinc-300 hover:text-white"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={18} />
                 </a>
                 <a
-                  href="#"
+                  href={SOCIAL_LINKS.instagram}
+                  target='_blank'
                   className="bg-zinc-800 hover:bg-blue-600 rounded-full p-3 transition-colors text-zinc-300 hover:text-white"
                   aria-label="Instagram"
                 >
@@ -57,26 +62,20 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-bold mb-6">Quick Links</h4>
               <ul className="space-y-3">
-                {[
-                  { name: 'Home', href: '#home' },
-                  { name: 'Services', href: '#services' },
-                  { name: 'Projects', href: '#projects' },
-                  { name: 'Process', href: '#process' },
-                  { name: 'Contact', href: '#contact' },
-                ].map(({ name, href }) => (
-                  <li key={name}>
+                {FOOTER_CONFIG.quickLinks.map((link) => (
+                  <li key={link}>
                     <a
-                      href={href}
+                      href={`#${link.toLowerCase()}`}
                       onClick={(e) => {
                         e.preventDefault();
-                        const element = document.querySelector(href);
+                        const element = document.querySelector(`#${link.toLowerCase()}`);
                         if (element) {
                           element.scrollIntoView({ behavior: 'smooth' });
                         }
                       }}
                       className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                     >
-                      {name}
+                      {link}
                       <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
                     </a>
                   </li>
@@ -88,16 +87,17 @@ export default function Footer() {
             <div>
               <h4 className="text-white font-bold mb-6">Services</h4>
               <ul className="space-y-3">
-                {[
-                  'Steel Fabrication',
-                  'Structural Construction',
-                  'Industrial Installation',
-                  'Offshore Solutions',
-                  'Maintenance',
-                ].map((service) => (
+                {FOOTER_CONFIG.services.map((service) => (
                   <li key={service}>
                     <a
-                      href="#"
+                      href="#services"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.querySelector("#services");
+                        if (element) {
+                          element.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
                       className="text-zinc-400 hover:text-white transition-colors flex items-center gap-2 group"
                     >
                       {service}
@@ -117,7 +117,7 @@ export default function Footer() {
                   <MapPin className="text-blue-500 flex-shrink-0 mt-1" size={18} />
                   <div>
                     <p className="text-white text-sm font-semibold">Address</p>
-                    <p className="text-zinc-400 text-sm">Lagos, Nigeria</p>
+                    <p className="text-zinc-400 text-sm">{CONTACT_INFO.address}</p>
                   </div>
                 </div>
 
@@ -126,7 +126,7 @@ export default function Footer() {
                   <Phone className="text-blue-500 flex-shrink-0 mt-1" size={18} />
                   <div>
                     <p className="text-white text-sm font-semibold">Phone</p>
-                    <p className="text-zinc-400 text-sm">+234 (0) XXX XXX XXXX</p>
+                    <p className="text-zinc-400 text-sm">{CONTACT_INFO.phone}</p>
                   </div>
                 </div>
 
@@ -135,7 +135,7 @@ export default function Footer() {
                   <Mail className="text-blue-500 flex-shrink-0 mt-1" size={18} />
                   <div>
                     <p className="text-white text-sm font-semibold">Email</p>
-                    <p className="text-zinc-400 text-sm">info@dcnl.com</p>
+                    <p className="text-zinc-400 text-sm">{CONTACT_INFO.email}</p>
                   </div>
                 </div>
               </div>
@@ -148,18 +148,18 @@ export default function Footer() {
           {/* Bottom Footer */}
           <div className="mt-12 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-zinc-400 text-sm">
-              &copy; {currentYear} Destinyt Company Nigerian Limited (DCNL). All rights reserved.
+              &copy; {currentYear} {COMPANY_INFO.name} ({COMPANY_INFO.shortName}). All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+              <Link href={FOOTER_CONFIG.policyLinks.privacy} className="text-zinc-400 hover:text-white transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+              </Link>
+              <Link href={FOOTER_CONFIG.policyLinks.terms} className="text-zinc-400 hover:text-white transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="text-zinc-400 hover:text-white transition-colors">
+              </Link>
+              <Link href={FOOTER_CONFIG.policyLinks.cookies} className="text-zinc-400 hover:text-white transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>

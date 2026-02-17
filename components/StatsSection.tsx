@@ -2,35 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import { Card } from '@/components/ui/card';
+import { STATS_CONFIG } from '@/lib/config';
 
-interface StatItem {
-  value: string;
-  label: string;
-  suffix?: string;
-}
 
-const stats: StatItem[] = [
-  {
-    value: '15',
-    label: 'Years of Experience',
-    suffix: '+',
-  },
-  {
-    value: '250',
-    label: 'Projects Completed',
-    suffix: '+',
-  },
-  {
-    value: '200',
-    label: 'Skilled Personnel',
-    suffix: '+',
-  },
-  {
-    value: '100',
-    label: 'Safety Compliance Score',
-    suffix: '%',
-  },
-];
+const { stats } = STATS_CONFIG;
 
 function AnimatedCounter({
   target,

@@ -1,6 +1,7 @@
 'use client';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SERVICES_CONFIG } from '@/lib/config';
 import {
   Wrench,
   Building2,
@@ -8,46 +9,24 @@ import {
   Anchor,
   Shield,
   Cog,
+  type LucideIcon,
 } from 'lucide-react';
 
-const services = [
-  {
-    icon: Wrench,
-    title: 'Steel Fabrication',
-    description:
-      'Custom steel fabrication and welding services for industrial and structural applications with precision engineering.',
-  },
-  {
-    icon: Building2,
-    title: 'Structural Construction',
-    description:
-      'Comprehensive structural construction solutions for buildings, bridges, and industrial structures.',
-  },
-  {
-    icon: Zap,
-    title: 'Industrial Installations',
-    description:
-      'Expert installation of industrial equipment, piping systems, and manufacturing infrastructure.',
-  },
-  {
-    icon: Anchor,
-    title: 'Offshore Solutions',
-    description:
-      'Specialized fabrication and installation services for offshore platforms and marine projects.',
-  },
-  {
-    icon: Shield,
-    title: 'Safety & Compliance',
-    description:
-      'Full compliance with international safety standards and certifications for all projects.',
-  },
-  {
-    icon: Cog,
-    title: 'Maintenance Services',
-    description:
-      'Ongoing maintenance, repair, and optimization services to keep your infrastructure running smoothly.',
-  },
-];
+// Map icon names from config to actual Lucide components
+const iconMap: { [key: string]: LucideIcon } = {
+  Wrench,
+  Building2,
+  Zap,
+  Anchor,
+  Shield,
+  Cog,
+};
+
+// Use services from the centralized config file
+const services = SERVICES_CONFIG.services.map(service => ({
+  ...service,
+  icon: iconMap[service.icon],
+}));
 
 export default function ServicesSection() {
   return (
@@ -75,7 +54,7 @@ export default function ServicesSection() {
                 <CardHeader>
                   <div className="mb-4">
                     <div className="inline-block p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors">
-                      <Icon className="w-6 h-6 text-blue-600" />
+                      {Icon && <Icon className="w-6 h-6 text-blue-600" />}
                     </div>
                   </div>
                   <CardTitle className="text-xl text-zinc-900">{service.title}</CardTitle>
