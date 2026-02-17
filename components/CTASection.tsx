@@ -28,7 +28,7 @@ export default function CTASection() {
               href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
               target="_blank"
               rel="noopener noreferrer"
-              className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-6 text-lg group")}
+              className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-white text-blue-600 hover:bg-blue-50 font-semibold px-10 py-6 text-lg group cursor-pointer")}
             >
               Contact us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

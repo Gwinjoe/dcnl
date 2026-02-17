@@ -102,15 +102,14 @@ export default function HeroSection() {
             isTransitioning ? 'opacity-50 scale-95' : 'opacity-100 scale-100'
           }`}
         >
-          <a
-            href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-6 text-lg")}
-          >
-            Contact us
-          </a>
-          <Button
+                      <a
+                        href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={cn(buttonVariants({ variant: "default", size: "lg" }), "bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-6 text-lg cursor-pointer")}
+                      >
+                        Contact us
+                      </a>          <Button
             variant="outline"
             size="lg"
             className="border-white text-white bg-transparent hover:bg-white hover:text-zinc-900 font-semibold px-8 py-6 text-lg"

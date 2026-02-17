@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { CONTACT_INFO } from '@/lib/config';
 import { cn } from '@/lib/utils';
@@ -33,25 +34,25 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
-          <a
+          <Link
             href="#home"
             onClick={(e) => handleNavClick(e, '#home')}
             className="flex-shrink-0 font-bold text-xl text-blue-600 hover:text-blue-700 transition-colors"
           >
             DCNL
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="text-zinc-700 hover:text-blue-600 transition-colors font-medium text-sm"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -85,14 +86,14 @@ export default function Header() {
         {isOpen && (
           <nav className="md:hidden pb-4 space-y-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className="block px-3 py-2 rounded-md text-zinc-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-medium"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <a
               href={`https://wa.me/${CONTACT_INFO.phoneRaw}`}

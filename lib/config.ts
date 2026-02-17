@@ -48,8 +48,8 @@ export const HERO_CONFIG = {
 // ============================================================================
 
 export const CONTACT_INFO = {
-  phone: '+234 (0) 8060 314 4497',
-  phoneRaw: '23480603144497', // For tel: links
+  phone: '+234 (0) 8060 314 497',
+  phoneRaw: '2348060314497', // For tel: links
   email: 'info@dcnl.com',
   address: 'Oyigbo, Nigeria',
   // Optional: Full address for maps
