@@ -112,7 +112,7 @@ export default function LocationSection() {
                 <MapPin className="h-16 w-16 text-blue-600 mx-auto mb-4 opacity-20" />
                 <p className="text-zinc-400 text-lg font-semibold">Interactive Map</p>
                 <p className="text-zinc-400 text-sm mt-2">
-                  You can embed a Google Maps iframe here
+                  I will embed a Google Maps iframe here
                 </p>
                 {/* Uncomment and replace with actual Google Maps embed code */}
                 {/* <iframe
